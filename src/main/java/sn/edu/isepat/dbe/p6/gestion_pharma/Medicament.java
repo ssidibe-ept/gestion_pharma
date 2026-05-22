@@ -26,4 +26,8 @@ public class Medicament {
 
     @Column(nullable = false)
     private double prix;
+
+    public String getNom() {
+        return nom;
+    }
 }
