@@ -1,4 +1,26 @@
 package sn.edu.isepat.dbe.p6.gestion_pharma;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Medicament {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column(nullable = false)
+    private String nom;
+    @Column(length = 200)
+    private String description;
+    @Column(nullable = false, precision = 10, scale = 2)
+    private double prix;
 }
