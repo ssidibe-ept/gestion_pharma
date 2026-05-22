@@ -26,4 +26,9 @@ public class Medicament {
 
     @Column(nullable = false)
     private double prix;
+
+    //setter
+    public void setId(Integer id) {
+        this.id = id;
+    }
 }
