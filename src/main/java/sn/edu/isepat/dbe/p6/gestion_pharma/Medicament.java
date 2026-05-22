@@ -17,10 +17,13 @@ public class Medicament {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @Column(nullable = false)
     private String nom;
+
     @Column(length = 200)
     private String description;
+    
     @Column(nullable = false, precision = 10, scale = 2)
     private double prix;
 }
